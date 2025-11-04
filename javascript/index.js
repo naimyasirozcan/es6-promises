@@ -62,7 +62,7 @@ obtainInstruction("steak", 0)
   })
   .then((outputOfStep7) => {
     document.querySelector("#steak").innerHTML += `<li>${outputOfStep7}</li>`;
-    document.querySelector("#steak").innerHTML += `<li>Mashed potatoes are ready!</li>`;
+    document.querySelector("#steak").innerHTML += `<li>Stake is ready!</li>`;
     document.querySelector("#steakImg").removeAttribute("hidden");
   })
   .catch((error) => console.log(error))
@@ -94,6 +94,7 @@ async function makeBroccoli() {
     const outputStep6 = await obtainInstruction("broccoli", 6);
     document.querySelector("#broccoli").innerHTML += `<li>${outputStep6}</li>`;
 
+    document.querySelector("#steak").innerHTML += `<li>Broccoli is ready!</li>`;
     document.querySelector("#broccoliImg").removeAttribute("hidden")
 
   }
@@ -109,3 +110,21 @@ makeBroccoli()
 
 // Bonus 2 - Promise all
 // ...
+
+Promise.all( //just writing down all functions that returns each steps value one by one
+ [ obtainInstruction("brusselsSprouts", 0), // IT NEEDS TO BE ARRAY WITH SQUARE BRACKETS []
+  obtainInstruction("brusselsSprouts", 1),
+  obtainInstruction("brusselsSprouts", 2),
+  obtainInstruction("brusselsSprouts", 3),
+  obtainInstruction("brusselsSprouts", 4),
+  obtainInstruction("brusselsSprouts", 5),
+  obtainInstruction("brusselsSprouts", 6),
+  obtainInstruction("brusselsSprouts", 7),]
+).then((steps => { //returns an array so i need to be careful and use map methodds to process data that i exrtracted
+  steps.forEach(step => {
+    document.querySelector("#brusselsSprouts").innerHTML += `<li>${step}</li>`;
+  });
+  document.querySelector("#steak").innerHTML += `<li>Brussels sprouts are ready!</li>`;
+  document.querySelector("#brusselsSproutsImg").removeAttribute("hidden")
+
+}))
