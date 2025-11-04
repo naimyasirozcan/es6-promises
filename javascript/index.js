@@ -77,22 +77,22 @@ async function makeBroccoli() {
     document.querySelector("#broccoli").innerHTML += `<li>${outputStep0}</li>`;
 
     const outputStep1 = await obtainInstruction("broccoli", 1);
-    document.querySelector("#broccoli").innerHTML += `<li>${outputStep0}</li>`;
+    document.querySelector("#broccoli").innerHTML += `<li>${outputStep1}</li>`;
 
     const outputStep2 = await obtainInstruction("broccoli", 2);
-    document.querySelector("#broccoli").innerHTML += `<li>${outputStep0}</li>`;
+    document.querySelector("#broccoli").innerHTML += `<li>${outputStep2}</li>`;
 
     const outputStep3 = await obtainInstruction("broccoli", 3);
-    document.querySelector("#broccoli").innerHTML += `<li>${outputStep0}</li>`;
+    document.querySelector("#broccoli").innerHTML += `<li>${outputStep3}</li>`;
 
     const outputStep4 = await obtainInstruction("broccoli", 4);
-    document.querySelector("#broccoli").innerHTML += `<li>${outputStep0}</li>`;
+    document.querySelector("#broccoli").innerHTML += `<li>${outputStep4}</li>`;
 
     const outputStep5 = await obtainInstruction("broccoli", 5);
-    document.querySelector("#broccoli").innerHTML += `<li>${outputStep0}</li>`;
+    document.querySelector("#broccoli").innerHTML += `<li>${outputStep5}</li>`;
 
     const outputStep6 = await obtainInstruction("broccoli", 6);
-    document.querySelector("#broccoli").innerHTML += `<li>${outputStep0}</li>`;
+    document.querySelector("#broccoli").innerHTML += `<li>${outputStep6}</li>`;
 
     document.querySelector("#broccoliImg").removeAttribute("hidden")
 
